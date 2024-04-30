@@ -1,13 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    Console log
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Tic Tac fe</title>
+		<script src="script.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="body">
+			<dialog id="modal">
+				<div class="flex-parent">
+					<div class="modal-container">
+						<button class="btn-close" onclick="closeModal()">
+							<i class="bx bx-window-close"></i>
+						</button>
+						<form action="" id="playerForm">
+							<h1>Add Players</h1>
+							<div class="user-input">
+								<label for="player1Name">
+									<input
+										type="text"
+										name="player1Name"
+										id="player1Name"
+										placeholder="Player 1"
+										required
+									/>
+									<i class="bx bx-id-card"></i>
+								</label>
+							</div>
+							<div class="user-input">
+								<label for="player2Name">
+									<input
+										type="text"
+										name="player2Name"
+										id="player2Name"
+										placeholder="Player 2"
+										required
+									/>
+									<i class="bx bx-id-card"></i>
+								</label>
+							</div>
+							<button type="submit" class="btn">
+								Submit
+							</button>
+						</form>
+					</div>
+				</div>
+			</dialog>
+
+			<div class="container">
+				<div class="title">Tic Tac Toe</div>
+				<div class="top-section">
+					<div class="player-name" id="player1">Player 1</div>
+					<div class="player-name" id="player2">Player 2</div>
+				</div>
+
+				<div class="middle-section">
+					<div class="display-message" id="displayMessage">
+						Display Message
+					</div>
+				</div>
+				<div class="bottom-section">
+					<div class="cell" id="0">0</div>
+					<div class="cell" id="1">1</div>
+					<div class="cell" id="2">2</div>
+					<div class="cell" id="3">3</div>
+					<div class="cell" id="4">4</div>
+					<div class="cell" id="5">5</div>
+					<div class="cell" id="6">6</div>
+					<div class="cell" id="7">7</div>
+					<div class="cell" id="8">8</div>
+				</div>
+				<div class="footer">
+					<button
+						class="setting-button"
+						id="namesButton"
+						onclick="openModal()"
+					>
+						change names
+					</button>
+					<button class="setting-button" id="resetButton">
+						reset
+					</button>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
