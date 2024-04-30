@@ -188,7 +188,7 @@ const createGame = (function () {
 			}
 		}
 
-		if (moveCount >= 9) {
+		if (moveCount >= 9 && !testBoard.boardhasWinner()) {
 			console.log(
 				"No Winner this game and all positions are taken, please play again"
 			);
@@ -225,6 +225,7 @@ const createGame = (function () {
 			player1Display.textContent =
 				document.getElementById("player1Name").value;
 			player1name = document.getElementById("player1Name").value;
+			player1Display.textContent =
 			player2Display.textContent =
 				document.getElementById("player2Name").value;
 			player2name = document.getElementById("player2Name").value;
